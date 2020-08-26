@@ -1,4 +1,4 @@
-# Array Methods: map() and reduce()
+# Array Methods: `map()`, `filter()` and `reduce()`
 
 The exercises in this repository are based on a gist at the following URL:
 
