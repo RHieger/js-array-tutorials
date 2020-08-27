@@ -23,8 +23,7 @@
 // TEST EXAMPLE: "Able was I ere I saw Elba"
 
 var capitalize = function(string){
-  const passedString = string;
-  const mappedString = passedString.split(' ');
+  const mappedString = string.split(' ');
   const stringArray = mappedString.map( (char) => {
     return char.toUpperCase();
   });
@@ -32,9 +31,9 @@ var capitalize = function(string){
   return capString;
 }
 
-const capitalizeExample = capitalize('Able was I ere I saw Elba.');
+const example = capitalize('Able was I ere I saw Elba.');
 
-console.log(`Able was I ere I saw Elba. => ${capitalizeExample}`);
+console.log(`Able was I ere I saw Elba. => ${example}`);
 
 
 
@@ -42,6 +41,13 @@ console.log(`Able was I ere I saw Elba. => ${capitalizeExample}`);
 // function to return a string where every other word is in all caps. 
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take. 
 // ex: swapCase('hey gurl, lets javascript together sometime') // => "HEY gurl, LETS javascript TOGETHER sometime"
+
+// TEST EXAMPLE: SAME AS ABOVE.
+
+// 1. Convert string to an array with space as a separator: split()
+//
+// 2.
+
 var swapCase = function(string){
   // Codeeeee
 }
