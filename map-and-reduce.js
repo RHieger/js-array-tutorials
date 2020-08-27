@@ -1,14 +1,42 @@
-// Simple problems to solve using the native .reduce and .map array methods. Each of these problems can be solved in many
-// different ways, but try to solve them using the requested higher order function.
+// Simple problems to solve using the native .reduce and .map array methods.
+// Each of these problems can be solved in many different ways, but try to
+// solve them using the requested higher order function.
+
+// MY SOLUTIONS:
+
+// I choose to write these functions to be executed in a
+// terminal using node.js. Every effort will be made to
+// illustrate the progression of the functions.
 
 // MAP
 
-// Write a function capitalize that takes a string and uses .map to return the same string in all caps. 
+// Write a function capitalize that takes a string and
+// uses .map to return the same string in all caps.
 // ex. capitalize('whoop') // => 'WHOOP'
 // ex. capitalize('oh hey gurl') // => "OH HEY GURL"
+
+// NOTE: The Stack Overflow Article at the link below
+// proved quite useful in solving the problem:
+
+// https://stackoverflow.com/questions/34925609/javascript-map-method-on-array-of-string-elements
+
+// TEST EXAMPLE: "Able was I ere I saw Elba"
+
 var capitalize = function(string){
-  // code code code!
+  const passedString = string;
+  const mappedString = passedString.split(' ');
+  const stringArray = mappedString.map( (char) => {
+    return char.toUpperCase();
+  });
+  const capString = stringArray.join(' ');
+  return capString;
 }
+
+const capitalizeExample = capitalize('Able was I ere I saw Elba.');
+
+console.log(`Able was I ere I saw Elba. => ${capitalizeExample}`);
+
+
 
 // Now write a new function called swapCase that takes a string of words and uses .map and your newly written capitalize() 
 // function to return a string where every other word is in all caps. 
