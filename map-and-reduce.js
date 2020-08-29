@@ -35,8 +35,6 @@ const example = capitalize('Able was I ere I saw Elba.');
 
 console.log(`Able was I ere I saw Elba. => ${example}`);
 
-
-
 // Now write a new function called swapCase that takes a string of words and uses .map and your newly written capitalize() 
 // function to return a string where every other word is in all caps. 
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take. 
@@ -46,11 +44,33 @@ console.log(`Able was I ere I saw Elba. => ${example}`);
 
 // 1. Convert string to an array with space as a separator: split()
 //
-// 2.
+// 2. Use map with call back that iterates over each element,
+// testing with if-else whether the element's index % 2 !== 0.
+//
+// 3. If true, return the word transformed to upper case.
+//
+// 4. If false, return the word transformed to lower case.
+//
+// 5. Use join() to transform the array once more into a
+// string comprised of its transformed elements, delimited
+// by spaces.
 
 var swapCase = function(string){
-  // Codeeeee
+  const stringArray = string.split(' ');
+  const mappedAltCapArray = stringArray.map( (word, index) => {
+    if ( (index + 1) % 2 !== 0 ) {
+      return word.toUpperCase();
+    } else {
+      return word.toLowerCase();
+    }
+  });
+  const altCapString = mappedAltCapArray.join(' ');
+  return altCapString;
 }
+
+const example1 = swapCase('Able was I ere I saw Elba.');
+
+console.log(`Able was I ere I saw Elba => ${example1}`);
 
 // Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the 
 // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.CharCodeAt() and see if you can use
